@@ -2,7 +2,34 @@
 <html>
 <body>
 
-<h1 style="font-size:100px">Hello World!</h1>
-<p>This is a paragraph.</p>
+<p id="demo">Click the button to change the layout of this paragraph</p>
+
+<button style="font-size: 20px" onclick="myFunction()">Click Me!</button>
+<br><br><br>
+<button onclick="buy()"> 10 clicks</button>
+<p id="click*"> </p>
+
+<script>
+let num1 = 0;
+let num2 = 1;
+function myFunction() {
+  let x = document.getElementById("demo");
+  num1 += num2;
+  x.style.fontSize = "30px"; 
+  x.style.color = "blue"; 
+  x.innerHTML = num1;
+}
+function buy() {
+if (num1 > 10) {
+num1 -= 10;
+num2 += 1;
+let x = document.getElementById("demo");
+x.innerHTML = num1;
+let y = document.getElementById("click*");
+y.innerHTML = num2;
+}
+}
+</script>
+
 </body>
 </html>
