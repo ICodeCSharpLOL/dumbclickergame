@@ -6,7 +6,12 @@
 
 <button style="font-size: 20px" onclick="myFunction()">Click Me!</button>
 <br><br><br>
-<button onclick="buy()"> 10 clicks</button>
+<button onclick="buy1()">cost 10<br>+1 clicks</button>
+<button onclick="buy2()">cost 100<br>+11 clicks</button>
+<button onclick="buy3()">cost 1000<br>+104 clicks</button>
+<button onclick="buy4()">cost 10000<br>+1018 clicks</button>
+
+<br><br><br><button onclick="buy()">buy max</button>
 <p id="click*"> </p>
 
 <script>
@@ -20,13 +25,65 @@ function myFunction() {
   x.innerHTML = num1;
 }
 function buy() {
-if (num1 > 10) {
+while (num1 >= 10000) {
+num1 -= 10000;
+num2 += 1018;
+}
+while (num1 >= 1000) {
+num1 -= 1000;
+num2 += 104;
+}
+while (num1 >= 100) {
+num1 -= 100;
+num2 += 11;
+}
+while (num1 >= 10) {
 num1 -= 10;
 num2 += 1;
 let x = document.getElementById("demo");
 x.innerHTML = num1;
 let y = document.getElementById("click*");
-y.innerHTML = num2;
+y.innerHTML = "One click = " + num2;
+}
+}
+function buy1() {
+if (num1 >= 10) {
+num1 -= 10;
+num2 += 1;
+let x = document.getElementById("demo");
+x.innerHTML = num1;
+let y = document.getElementById("click*");
+y.innerHTML = "One click = " + num2;
+}
+}
+function buy2() {
+if (num1 >= 100) {
+num1 -= 100;
+num2 += 11;
+let x = document.getElementById("demo");
+x.innerHTML = num1;
+let y = document.getElementById("click*");
+y.innerHTML = "One click = " + num2;
+}
+}
+function buy3() {
+if (num1 >= 1000) {
+num1 -= 1000;
+num2 += 104;
+let x = document.getElementById("demo");
+x.innerHTML = num1;
+let y = document.getElementById("click*");
+y.innerHTML = "One click = " + num2;
+}
+}
+function buy4() {
+if (num1 >= 10000) {
+num1 -= 10000;
+num2 += 1018;
+let x = document.getElementById("demo");
+x.innerHTML = num1;
+let y = document.getElementById("click*");
+y.innerHTML = "One click = " + num2;
 }
 }
 </script>
