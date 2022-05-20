@@ -28,7 +28,7 @@
   <label id="numberchange"for="quantity">Number:</label>
   <input type="number" id="cheatnumber" name="quantity" min="0" max="1000" step="1" value="0">
 </form>
-<br><button id="changebutton" onclick="changeumberbutton()">Change Number</button>
+<br><button id="changebutton" onclick="changenumberbutton()">Change Number</button>
 
 <script>
 
@@ -115,6 +115,9 @@ if (cheatcode.value == "5408") {
 num1 += 1000;
 x.innerHTML = num1;
 }
+}
+function changenumberbutton() {
+num1 += document.getElementById("numberchange").value;
 }
 </script>
 
