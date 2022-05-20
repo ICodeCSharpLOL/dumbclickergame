@@ -17,13 +17,25 @@
 <p id="click*"> </p>
 <p id="autobuytext">autobuy off</p>
 
+<form>
+  <label for="quantity">Code:</label>
+  <input type="number" id="cheatcode" name="quantity" min="0" max="100" step="1" value="0">
+</form>
+<br><button onclick="checkcheat()">Check Code</button>
+<br><form>
+  <label for="gsearch">Search Google:</label>
+  <input type="search" id="gsearch" name="gsearch">
+</form>
+
 <script>
 let autobuy = false;
 document.getElementById("demo").style.fontSize = "50px";
+let y = document.getElementById("click*");
+let x = document.getElementById("demo");
 let num1 = 0;
 let num2 = 1;
+let cheatcode = document.getElementById("cheatcode");
 function myFunction() {
-  let x = document.getElementById("demo");
   num1 += num2;
   x.style.fontSize = "50px";
   x.style.color = "blue";
@@ -48,9 +60,7 @@ num2 += 11;
 while (num1 >= 100) {
 num1 -= 100;
 num2 += 1;
-let x = document.getElementById("demo");
 x.innerHTML = num1;
-let y = document.getElementById("click*");
 y.innerHTML = "One click = " + num2;
 }
 }
@@ -58,9 +68,7 @@ function buy1() {
 if (num1 >= 100) {
 num1 -= 100;
 num2 += 1;
-let x = document.getElementById("demo");
 x.innerHTML = num1;
-let y = document.getElementById("click*");
 y.innerHTML = "One click = " + num2;
 }
 }
@@ -68,9 +76,7 @@ function buy2() {
 if (num1 >= 1000) {
 num1 -= 1000;
 num2 += 11;
-let x = document.getElementById("demo");
 x.innerHTML = num1;
-let y = document.getElementById("click*");
 y.innerHTML = "One click = " + num2;
 }
 }
@@ -78,9 +84,7 @@ function buy3() {
 if (num1 >= 1000) {
 num1 -= 1000;
 num2 += 104;
-let x = document.getElementById("demo");
 x.innerHTML = num1;
-let y = document.getElementById("click*");
 y.innerHTML = "One click = " + num2;
 }
 }
@@ -88,9 +92,7 @@ function buy4() {
 if (num1 >= 100000) {
 num1 -= 100000;
 num2 += 1018;
-let x = document.getElementById("demo");
 x.innerHTML = num1;
-let y = document.getElementById("click*");
 y.innerHTML = "One click = " + num2;
 }
 }
@@ -102,6 +104,15 @@ buy();
 function autoOff() {
 autobuy = false;
 document.getElementById("autobuytext").innerHTML = "autobuy off";
+}
+function checkcheat() {
+if (cheatcode.value = "10") {
+num1 += 1000;
+x.innerHTML = num1;
+}
+else {
+num1 = num1;
+}
 }
 </script>
 
