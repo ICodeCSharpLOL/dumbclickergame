@@ -12,9 +12,13 @@
 <button style="font-size: 20px"onclick="buy4()">cost 10000<br>+1018 clicks</button>
 
 <br><br><br><button style="font-size: 15px" onclick="buy()">buy max</button>
+<br><br><button style="font-size: 15px" onclick="autoOn()">autobuy on</button>
+<button style="font-size: 15px" onclick="autoOff()">autobuy off</button>
 <p id="click*"> </p>
+<br><p id="autobuytext">autobuy off</p>
 
 <script>
+let autobuy = false;
 document.getElementById("demo").style.fontSize = "50px";
 let num1 = 0;
 let num2 = 1;
@@ -24,6 +28,9 @@ function myFunction() {
   x.style.fontSize = "50px"; 
   x.style.color = "blue"; 
   x.innerHTML = num1;
+  while (autobuy) {
+  buy();
+  }
 }
 function buy() {
 while (num1 >= 10000) {
@@ -86,6 +93,14 @@ x.innerHTML = num1;
 let y = document.getElementById("click*");
 y.innerHTML = "One click = " + num2;
 }
+}
+function autoOn() {
+autobuy = true;
+document.getElementById("autobuytext").innerHTML = "autobuy on";
+}
+function autoOff() {
+autobuy = false;
+document.getElementById("autobuytext").innerHTML = "autobuy off";
 }
 </script>
 
