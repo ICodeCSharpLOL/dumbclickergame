@@ -15,7 +15,7 @@
 <br><br><button style="font-size: 15px" onclick="autoOn()">autobuy on</button>
 <button style="font-size: 15px" onclick="autoOff()">autobuy off</button>
 <p id="click*"> </p>
-<br><p id="autobuytext">autobuy off</p>
+<p id="autobuytext">autobuy off</p>
 
 <script>
 let autobuy = false;
@@ -28,7 +28,7 @@ function myFunction() {
   x.style.fontSize = "50px"; 
   x.style.color = "blue"; 
   x.innerHTML = num1;
-  while (autobuy) {
+  if (autobuy) {
   buy();
   }
 }
@@ -97,6 +97,7 @@ y.innerHTML = "One click = " + num2;
 function autoOn() {
 autobuy = true;
 document.getElementById("autobuytext").innerHTML = "autobuy on";
+buy();
 }
 function autoOff() {
 autobuy = false;
