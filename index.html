@@ -18,14 +18,10 @@
 <p id="autobuytext">autobuy off</p>
 
 <form>
-  <label for="quantity">Code:</label>
-  <input type="number" id="cheatcode" name="quantity" min="0" max="100" step="1" value="0">
+  <label for="quantity">Cheat Code:</label>
+  <input type="number" id="cheatcode" name="quantity" min="0" max="1000" step="1" value="0">
 </form>
 <br><button onclick="checkcheat()">Check Code</button>
-<br><form>
-  <label for="gsearch">Search Google:</label>
-  <input type="search" id="gsearch" name="gsearch">
-</form>
 
 <script>
 let autobuy = false;
@@ -106,12 +102,9 @@ autobuy = false;
 document.getElementById("autobuytext").innerHTML = "autobuy off";
 }
 function checkcheat() {
-if (cheatcode.value = "10") {
+if (cheatcode.value == "5408") {
 num1 += 1000;
 x.innerHTML = num1;
-}
-else {
-num1 = num1;
 }
 }
 </script>
