@@ -4,16 +4,16 @@
 
 <p id="demo" style="color: blue">0</p>
 
-<button style="font-size: 35px" onclick="myFunction()">Click Me!</button>
+<button style="font-size: 30px" onclick="myFunction()">Click Me!</button>
 <br><br><br>
-<button style="font-size: 20px" onclick="buy1()">cost 100<br>+1 clicks</button>
-<button style="font-size: 20px" onclick="buy2()">cost 1000<br>+11 clicks</button>
-<button style="font-size: 20px" onclick="buy3()">cost 10000<br>+104 clicks</button>
-<button style="font-size: 20px"onclick="buy4()">cost 100000<br>+1018 clicks</button>
+<button style="font-size: 15px" onclick="buy1()">cost 100<br>+1 clicks</button>
+<button style="font-size: 15px" onclick="buy2()">cost 1000<br>+11 clicks</button>
+<button style="font-size: 15px" onclick="buy3()">cost 10000<br>+104 clicks</button>
+<button style="font-size: 15px"onclick="buy4()">cost 100000<br>+1018 clicks</button>
 
-<br><br><br><button style="font-size: 15px" onclick="buy()">buy max</button>
-<br><br><button style="font-size: 15px" onclick="autoOn()">autobuy on</button>
-<button style="font-size: 15px" onclick="autoOff()">autobuy off</button>
+<br><br><button style="font-size: 13px" onclick="buy()">buy max</button>
+<button style="font-size: 13px" onclick="autoOn()">autobuy on</button>
+<button style="font-size: 13px" onclick="autoOff()">autobuy off</button>
 <p id="click*"> </p>
 <p id="autobuytext">autobuy off</p>
 
@@ -21,11 +21,20 @@
   <label for="quantity">Cheat Code:</label>
   <input type="number" id="cheatcode" name="quantity" min="0" max="1000" step="1" value="0">
 </form>
-<br><button onclick="checkcheat()">Check Code</button>
+<br><button onclick="checkcheat()">Check Code</button><br>
+
+
+<br><form>
+  <label id="numberchange"for="quantity">Number:</label>
+  <input type="number" id="cheatnumber" name="quantity" min="0" max="1000" step="1" value="0">
+</form>
+<br><button id="changebutton" onclick="changeumberbutton()">Change Number</button>
 
 <script>
+
+
 let autobuy = false;
-document.getElementById("demo").style.fontSize = "50px";
+document.getElementById("demo").style.fontSize = "40px";
 let y = document.getElementById("click*");
 let x = document.getElementById("demo");
 let num1 = 0;
