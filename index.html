@@ -6,10 +6,10 @@
 
 <button style="font-size: 35px" onclick="myFunction()">Click Me!</button>
 <br><br><br>
-<button style="font-size: 20px" onclick="buy1()">cost 10<br>+1 clicks</button>
-<button style="font-size: 20px" onclick="buy2()">cost 100<br>+11 clicks</button>
-<button style="font-size: 20px" onclick="buy3()">cost 1000<br>+104 clicks</button>
-<button style="font-size: 20px"onclick="buy4()">cost 10000<br>+1018 clicks</button>
+<button style="font-size: 20px" onclick="buy1()">cost 100<br>+1 clicks</button>
+<button style="font-size: 20px" onclick="buy2()">cost 1000<br>+11 clicks</button>
+<button style="font-size: 20px" onclick="buy3()">cost 10000<br>+104 clicks</button>
+<button style="font-size: 20px"onclick="buy4()">cost 100000<br>+1018 clicks</button>
 
 <br><br><br><button style="font-size: 15px" onclick="buy()">buy max</button>
 <br><br><button style="font-size: 15px" onclick="autoOn()">autobuy on</button>
@@ -25,28 +25,28 @@ let num2 = 1;
 function myFunction() {
   let x = document.getElementById("demo");
   num1 += num2;
-  x.style.fontSize = "50px"; 
-  x.style.color = "blue"; 
+  x.style.fontSize = "50px";
+  x.style.color = "blue";
   x.innerHTML = num1;
   if (autobuy) {
   buy();
   }
 }
 function buy() {
+while (num1 >= 100000) {
+num1 -= 100000;
+num2 += 1018;
+}
 while (num1 >= 10000) {
 num1 -= 10000;
-num2 += 1018;
+num2 += 104;
 }
 while (num1 >= 1000) {
 num1 -= 1000;
-num2 += 104;
+num2 += 11;
 }
 while (num1 >= 100) {
 num1 -= 100;
-num2 += 11;
-}
-while (num1 >= 10) {
-num1 -= 10;
 num2 += 1;
 let x = document.getElementById("demo");
 x.innerHTML = num1;
@@ -55,8 +55,8 @@ y.innerHTML = "One click = " + num2;
 }
 }
 function buy1() {
-if (num1 >= 10) {
-num1 -= 10;
+if (num1 >= 100) {
+num1 -= 100;
 num2 += 1;
 let x = document.getElementById("demo");
 x.innerHTML = num1;
@@ -65,8 +65,8 @@ y.innerHTML = "One click = " + num2;
 }
 }
 function buy2() {
-if (num1 >= 100) {
-num1 -= 100;
+if (num1 >= 1000) {
+num1 -= 1000;
 num2 += 11;
 let x = document.getElementById("demo");
 x.innerHTML = num1;
@@ -85,8 +85,8 @@ y.innerHTML = "One click = " + num2;
 }
 }
 function buy4() {
-if (num1 >= 10000) {
-num1 -= 10000;
+if (num1 >= 100000) {
+num1 -= 100000;
 num2 += 1018;
 let x = document.getElementById("demo");
 x.innerHTML = num1;
