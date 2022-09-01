@@ -40,6 +40,7 @@ let y = document.getElementById("click*");
 let x = document.getElementById("demo");
 let num1 = 0;
 let num2 = 1;
+load();
 let cheatcode = document.getElementById("cheatcode");
 function load() {
   num2 = JSON.parse(localStorage.getItem('num2'));
@@ -57,6 +58,7 @@ function myFunction() {
   if (autobuy) {
   buy();
   }
+  save();
 }
 function buy() {
 while (num1 >= 100000) {
