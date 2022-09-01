@@ -125,10 +125,13 @@ function changenumberbutton() {
     {
 num1 += parseInt(document.getElementById("cheatnumber").value);
 x.innerHTML = num1;
+  if (autobuy) {
+  buy();
+  }
+   }
 function save() {
   localStorage.setItem('multi', JSON.stringify(num2));
   localStorage.setItem('score', JSON.stringify(num1));
-}
 }
 }
 </script>
