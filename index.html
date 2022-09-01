@@ -41,6 +41,10 @@ let x = document.getElementById("demo");
 let num1 = 0;
 let num2 = 1;
 let cheatcode = document.getElementById("cheatcode");
+function load() {
+  num2 = JSON.parse(localStorage.getItem('num2'));
+  num1 = JSON.parse(localStorage.getItem('num1'));
+}
 function myFunction() {
   num1 += num2;
   x.style.fontSize = "50px";
@@ -121,6 +125,10 @@ function changenumberbutton() {
     {
 num1 += parseInt(document.getElementById("cheatnumber").value);
 x.innerHTML = num1;
+function save() {
+  localStorage.setItem('multi', JSON.stringify(num2));
+  localStorage.setItem('score', JSON.stringify(num1));
+}
 }
 }
 </script>
